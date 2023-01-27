@@ -11,8 +11,8 @@ public class FizzBuzzTest {
 	@Test
 	void can_play_fizzBuzz() {
 		FizzBuzz fizzbuzz = new FizzBuzz();
-		String result = fizzbuzz.play(0);
-		assertEquals("0", result);
+		String result = fizzbuzz.play(1);
+		assertEquals("1", result);
 	}
 
 	@ParameterizedTest()
