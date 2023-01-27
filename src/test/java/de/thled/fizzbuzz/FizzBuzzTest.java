@@ -33,10 +33,20 @@ public class FizzBuzzTest {
 			"10",
 			"55",
 	})
-	void say_fizz_for_multiple_of_5(int multipleOf5) {
+	void say_buzz_for_multiple_of_5(int multipleOf5) {
 		FizzBuzz fizzBuzz = new FizzBuzz();
 		String result = fizzBuzz.play(multipleOf5);
 		assertEquals("Buzz", result);
+	}
+
+	@ParameterizedTest()
+	@CsvSource({
+			"15",
+	})
+	void say_fizzbuzz_for_multiple_of_3_and_5(int multipleOf3And5) {
+		FizzBuzz fizzBuzz = new FizzBuzz();
+		String result = fizzBuzz.play(multipleOf3And5);
+		assertEquals("FizzBuzz", result);
 	}
 
 }
