@@ -43,6 +43,8 @@ public class FizzBuzzTest {
 	@CsvSource({
 			"15",
 			"30",
+			"45",
+			"60",
 	})
 	void say_fizzbuzz_for_multiple_of_3_and_5(int multipleOf3And5) {
 		FizzBuzz fizzBuzz = new FizzBuzz();
