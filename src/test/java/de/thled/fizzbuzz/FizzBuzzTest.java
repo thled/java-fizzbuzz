@@ -3,6 +3,8 @@ package de.thled.fizzbuzz;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 public class FizzBuzzTest {
 
@@ -13,17 +15,14 @@ public class FizzBuzzTest {
 		assertEquals("0", result);
 	}
 
-	@Test
-	void say_fizz_for_3() {
+	@ParameterizedTest()
+	@CsvSource({
+			"3",
+			"6",
+	})
+	void say_fizz_for_multiple_of_3(int multipleOf3) {
 		FizzBuzz fizzBuzz = new FizzBuzz();
-		String result = fizzBuzz.play(3);
-		assertEquals("Fizz", result);
-	}
-
-	@Test
-	void say_fizz_for_6() {
-		FizzBuzz fizzBuzz = new FizzBuzz();
-		String result = fizzBuzz.play(6);
+		String result = fizzBuzz.play(multipleOf3);
 		assertEquals("Fizz", result);
 	}
 
