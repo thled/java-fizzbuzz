@@ -52,4 +52,11 @@ public class FizzBuzzTest {
 		assertEquals("FizzBuzz", result);
 	}
 
+	@Test
+	void what_happens_with_0() {
+		FizzBuzz fizzbuzz = new FizzBuzz();
+		String result = fizzbuzz.play(0);
+		assertEquals("FizzBuzz", result);
+	}
+
 }
