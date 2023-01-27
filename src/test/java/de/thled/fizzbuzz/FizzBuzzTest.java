@@ -42,6 +42,7 @@ public class FizzBuzzTest {
 	@ParameterizedTest()
 	@CsvSource({
 			"15",
+			"30",
 	})
 	void say_fizzbuzz_for_multiple_of_3_and_5(int multipleOf3And5) {
 		FizzBuzz fizzBuzz = new FizzBuzz();
