@@ -19,4 +19,12 @@ public class FizzBuzzTest {
 		String result = fizzBuzz.play(3);
 		assertEquals("Fizz", result);
 	}
+
+	@Test
+	void say_fizz_for_6() {
+		FizzBuzz fizzBuzz = new FizzBuzz();
+		String result = fizzBuzz.play(6);
+		assertEquals("Fizz", result);
+	}
+
 }
