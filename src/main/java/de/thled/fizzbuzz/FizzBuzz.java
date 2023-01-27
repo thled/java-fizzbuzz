@@ -3,7 +3,7 @@ package de.thled.fizzbuzz;
 public class FizzBuzz {
 
 	public String play(int number) {
-		if (number == 15 || number == 30) {
+		if (number % 3 == 0 && number % 5 == 0) {
 			return "FizzBuzz";
 		}
 
