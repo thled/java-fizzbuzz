@@ -13,4 +13,10 @@ public class FizzBuzzTest {
 		assertEquals("0", result);
 	}
 
+	@Test
+	void say_fizz_for_3() {
+		FizzBuzz fizzBuzz = new FizzBuzz();
+		String result = fizzBuzz.play(3);
+		assertEquals("Fizz", result);
+	}
 }
