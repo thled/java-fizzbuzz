@@ -27,4 +27,14 @@ public class FizzBuzzTest {
 		assertEquals("Fizz", result);
 	}
 
+	@ParameterizedTest()
+	@CsvSource({
+			"5",
+	})
+	void say_fizz_for_multiple_of_5(int multipleOf5) {
+		FizzBuzz fizzBuzz = new FizzBuzz();
+		String result = fizzBuzz.play(multipleOf5);
+		assertEquals("Buzz", result);
+	}
+
 }
